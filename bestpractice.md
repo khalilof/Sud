@@ -29,14 +29,14 @@ If you have any questions about this DataCite Best Practice Guide, please contac
 
 The [DataCite Metadata Schema [external link]](https://schema.datacite.org) has become a de facto standard for describing research data. Despite all of its efforts to standardize metadata allocation, this schema offers a great deal of leeway and alternatives in detail. For example, it is optional to clearly identify languages used in the metadata either via ISO 639-1 or ISO 639-2 language tags. The value of metadata increases with its consistency, which is achieved through compliance with standards. One of the aims of the Best Practice Guide presented here is therefore to limit the choices provided by DataCite by specifying a preference, and in this way to ensure as much consistency as possible.
 
-This document is a guideline for the use of the official [DataCite Metadata Schema documentation [external link]](https://schema.datacite.org), [version 4.5 [external link]](https://doi.org/10.14454/znvd-6q68). A support documentation for more convenience and better navigation can be found here as a HTML version [DataCite Metadata Schema Documentation [external link, different versions available]](https://datacite-metadata-schema.readthedocs.io). 
+This document is a guideline for the use of the official [DataCite Metadata Schema documentation [external link]](https://schema.datacite.org), [version 4.5 [external link]](https://doi.org/10.14454/znvd-6q68). A more convenient support documentation with better navigation can be found here as a HTML version [DataCite Metadata Schema Documentation [external link](https://datacite-metadata-schema.readthedocs.io). 
 It is meant for researchers, IT and library support staff. Further information on the schema can be found on the [DataCite support site [external link]](https://support.datacite.org/docs/datacite-metadata-schema).
 
-To create a DataCite XML file for the project you want to describe, we recommend to you to use the [DataCite Metadata Generator [external link]](https://dhvlab.gwi.uni-muenchen.de/datacite-generator/). This tool is kept in sync with this guideline, safe for transmission times inbetween versions. If you want to create metadata for research data on a scale that is too large for manual procedures, please contact one of the institutions named above.
+To create a DataCite XML file, we recommend to you to use the [DataCite Metadata Generator [external link]](https://dhvlab.gwi.uni-muenchen.de/datacite-generator/). This tool is kept in sync with this guideline, safe for transmission times inbetween versions. If you want to create metadata for research data on a scale that is too large for manual procedures, please contact one of the institutions named above.
 
 ## Overview
 
-The first part, [General Best Practice](#a-general-best-practice), is a selection of recommendations and obligations when using DataCite in general. It has been written in an FAQ-style (Frequently Asked Questions).
+The first part, [General Best Practice](#a-general-best-practice), is a selection of recommendations and obligations when using DataCite in general and was written in an FAQ-style (Frequently Asked Questions).
 
 The second part, [Best Practice for specific fields](#b-best-practice-for-specific-fields), gives more details for each of the 20 metadata fields of the DataCite metadata standard.
 
@@ -73,8 +73,8 @@ The third part, [Examples](#c-examples), is a compilation of DataCite examples.
 * [19 fundingReference [o]](#19-fundingreference-o)
 * [20 relatedItem [o]](#20-relateditem-o)
 
-Mandatory fields are indicated by the tag **[m]**, recommended fields by **[r]** and optional fields by **[o]**. Note: This guide deviates from the [DataCite Metadata Schema 4.5 [external link]]( https://doi.org/10.14454/g8e5-6293 ) in the assessment of recommend and optional properties and assigns different levels of obligation to some of them. These are asterisked in the list above.  
-The presence of these fields improves discovery, makes long-term management of the datasets easier for the hosting institution and is helpful for future (re-)users of the dataset. The benefits outweigh the cost of requiring additional information. Furthermore, the information can often be provided by researchers in a straightforward way; like providing a short abstract in the _description_.  
+Mandatory fields are indicated by the tag **[m]**, recommended fields by **[r]** and optional fields by **[o]**. Note: This guide deviates from the [DataCite Metadata Schema 4.5 [external link]]( https://doi.org/10.14454/g8e5-6293 ) in the assessment of recommend and optional properties and assigns different levels of obligation to some of them. They are indicated by an * in the list above.  
+These fields improve discovery, make long-term management of the datasets easier for the hosting institution and are helpful for future (re-)users of the dataset. The benefits of providing additional information outweigh the effort, as most of the information is already available to researchers like providing a short abstract in the _description_.  
 
 
 ## [C. Examples](#examples)
@@ -106,7 +106,7 @@ Unless otherwise specified all information in the metadata concerns the research
 </title>
 ```
 
-* Proper nouns need not be translated.
+* Proper nouns do not need to be translated.
 * Use standardized data (e.g. controlled vocabularies) whenever possible. This might allow data aggregators to display the information in the language most suitable to the use case at hand.
 * Recommendation: use either the two-letter language codes from ISO 639-1 or the three-letter language codes from ISO 639-2 (listed on [Wikipedia [external link]](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes)). Be advised: the three-letter codes are used in library systems. If you use a different standard (i.e. [BCP 47 [external link]](https://en.wikipedia.org/wiki/IETF_language_tag)), pay attention to be consistent and do not alternate between standards.
 
@@ -127,11 +127,14 @@ Unless otherwise specified all information in the metadata concerns the research
     * GND-ID entries can be conveniently searched for on [WebGND [external link]](http://gnd.eurospider.com/s) or [lobid-gnd [external link]](https://lobid.org/gnd); for further search options see the [GND website [external link]](https://gnd.network/Webs/gnd/DE/Entdecken/entdecken_node.html)
     * Only use individualized GND entries that clearly identify a person (usually by year of birth and/or profession)
 ```xml
+        <!-- GND entry --> 
         <nameIdentifier
             schemeURI="https://d-nb.info/gnd/"
             nameIdentifierScheme="GND">
                 123778689
         </nameIdentifier>
+        
+        <!-- ORCID entry -->        
         <nameIdentifier
             schemeURI="http://orcid.org/"
             nameIdentifierScheme="ORCID">
@@ -147,7 +150,7 @@ Unless otherwise specified all information in the metadata concerns the research
 ### How should I specify an institution?
 * Institutions may mainly be enterend in _affiliaton_ or _fundingReference_
 * Follow the policy of the institution.
-* State the name of the institution as specific as possible (e.g. start with the chair/group, not with the university). If the name of the institution changed, use the name employed during the time the resource was created.
+* State the name of the institution as specific as possible (e.g. start with the chair/group, not with the university). If the name of the institution has changed use the name as it was at the time of creation of the resource.
 * Start with the more specific organizational units first and end with the most generic unit, separated by semicolon:
 ```xml
 <affiliation xml:lang="de">
@@ -169,7 +172,7 @@ Unless otherwise specified all information in the metadata concerns the research
 ```
 * Affiliations are to be specified as of the time of creation of the resource.
 * Add a persistent identifier (PID) for the institution, preferably a ([ROR-ID [external link]](https://ror.org/) (Research Organization Registry); if there is no entry in ROR, use a [ISNI-ID [external link]](http://www.isni.org/search) (International Standard Name Identifier) or GND-ID.
-* In the case of [research funding](#19-fundingreference-o) organizations, it also makes sense to specify the [CrossRef Funder Registry ID [external link]](https://www.crossref.org/services/funder-registry/).
+* For [research funding](#19-fundingreference-o) organizations it is recommended to additionally provide the [CrossRef Funder Registry ID [external link]](https://www.crossref.org/services/funder-registry/).
 ```xml
         <fundingReference>
             <funderName>Deutsche Forschungsgemeinschaft (DFG)</funderName>
@@ -209,7 +212,7 @@ __Example__
 
 * This field is mandatory.
 * Consult sections on [how to specify a person](#how-should-i-specify-a-person) and [how to specify a institution](#how-should-i-specify-a-instituion)
-* Always prefer natural persons over institutions. If no natural person can be identified, you must set the attribute _nameType_ to "Organizational".
+* Always prefer natural persons over institutions.
 
 __Example__
 ```xml
@@ -346,7 +349,7 @@ Specifying the location via subject is mandatory, if applicable to the resource:
 * See [_geoLocation_ section](#18-geolocation-r) for a more detailed specification.
 
 #### Additional subject annotations
-* Every other subject may be added.
+* Additional subjects may be added.
 * Specify the language of the subject.
 * It is recommended to always qualify subjects by URL or scheme name. A good starting point to research existing schemes is [BARTOC.org [external link]](http://www.bartoc.org/) - Basic Register of Thesauri, Ontologies & Classifications. Unqualified subjects (not controlled by a controlled vocabulary, ontology or any other standard for the subject terms) are often useless for research data aggregators due to ambiguities.
 
@@ -425,23 +428,22 @@ For this example a complete DataCite metadata file is available, see [VerbaAlpin
 
 |Option            | Description from DataCite standard (italics) and usage hints |
 |-----------------|----------------------------------------------------------------------------|
-|ContactPerson     | Person with knowledge of how to access, troubleshoot, or otherwise field issues related to the resource.|
-|DataCollector     | Person/institution responsible for finding, gathering/collecting data under the guidelines of the author(s) or Principal Investigator (PI).|
-|DataCurator       | Person tasked with reviewing, enhancing, cleaning, or standardizing metadata and the associated data submitted for storage, use, and maintenance of data quality.|
+|ContactPerson     | *Person with knowledge of how to access, troubleshoot, or otherwise field issues related to the resource.*|
+|DataCollector     | *Person/institution responsible for finding, gathering/collecting data under the guidelines of the author(s) or Principal Investigator (PI).*|
+|DataCurator       | *Person tasked with reviewing, enhancing, cleaning, or standardizing metadata and the associated data submitted for storage, use, and maintenance within a data centre or repository.*|
 |DataManager       | Person or organization responsible for digital maintainance of the finished resource, e.g. migration to new hardware, software and security updates for servers, access rights management.|
-|Distributor       | Institution responsible for dissemination of electronic or printed copies of the resource. The distributor is not neccessarily  also a hosting institution of a digital resource, e.g., if server hosting is outsourced but the distributor still organizes access to the resource.|
-|Editor       | A person who oversees the details related to the publication format of the resource.|
-|HostingInstitution| Typically, the organization allowing the resource to be available on the internet through the provision of its hardware/software/operating support.|
-|ProjectLeader     | Person officially designated as head of project team or sub-project team instrumental in the work necessary to development of the resource.|
-|ProjectManager    | Person officially designated as manager of a project. Project may consist of one or many project teams and sub-teams.|
-|ProjectMember     | Person on the membership list of a designated project/project team. All persons with a contract in the context of the project which produced the resource.|
-|Researcher        | A person involved in analyzing data or the results of an experiment or formal study. May indicate an intern or assistant to one of the authors who helped with research but who was not so “key” as to be listed as an author / creator.|
-|ResearchGroup        | Typically refers ot a group of individuals within a lab, department or division that has a specifically defined focus of activity.|
-|RightsHolder      | Person or institution owning or managing property rights, including intellectual property rights over the resource. Mandatory for non-free licenses; person or institution that owns the rights listed in field [_rights_](#16-rights-m).|
-|Sponsor      | Organization or person that issued a contract or under the auspices of which a work has been printed, published, developed, etc.|
-|Supervisor      | We recommmed using this role for PhD advisors of the creators, who did not particiate as creators or in other roles themselves.|
-|WorkPackageLeader | Person responsible for ensuring the comprehensive contents, versioning, and availability of the work package during the development of the resource.|
-
+|Distributor       | Institution responsible for dissemination of electronic or printed copies of the resource. The distributor is not neccessarily also a hosting institution of a digital resource, e.g., if server hosting is outsourced but the distributor still organizes access to the resource.|
+|Editor       | *A person who oversees the details related to the publication format of the resource.*|
+|HostingInstitution| *Typically, the organisation allowing the resource to be available on the internet through the provision of its hardware/software/operating support.*|
+|ProjectLeader     | *Person officially designated as head of project team or sub-project team instrumental in the work necessary to development of the resource.*|
+|ProjectManager    | *Person officially designated as manager of a project. Project may consist of one or many project teams and sub-teams.*|
+|ProjectMember     | *Person on the membership list of a designated project/project team.* All persons with a contract in the context of the project which produced the resource.|
+|Researcher        | *A person involved in analyzing data or the results of an experiment or formal study. May indicate an intern or assistant to one of the authors who helped with research but who was not so “key” as to be listed as an author.*|
+|ResearchGroup        | *Typically refers to a group of individuals within a lab, department or division that has a specifically defined focus of activity.*|
+|RightsHolder      | *Person or institution owning or managing property rights, including intellectual property rights over the resource.* Mandatory for non-free licenses; person or institution that owns the rights listed in field [Rights](#rights). |
+|Sponsor      | *Organization or person that issued a contract or under the auspices of which a work has been printed, published, developed, etc.*|
+|Supervisor      | *Designated administrator over one or more groups/teams working to produce a resource, or over one or more steps of a development process.* We recommmed using this role for PhD advisors of the creators, who did not particiate as creators or in other roles themselves.|
+|WorkPackageLeader | *The Work Package Leader is responsible for ensuring the comprehensive contents, versioning, and availability of the Work Package during the development of the resource.*|
 
 __Example__
 ```xml
@@ -479,15 +481,15 @@ __Example__
 [DataCite documentation [external link]](https://datacite-metadata-schema.readthedocs.io/en/4.5/properties/date/)
 
 * This field is recommended.
-* It is recommended to indicate date and time following the [W3C time and data formats [external link]](https://www.w3.org/TR/NOTE-datetime). If the time is specified always include the time zone.   
+* It is recommended to provide date and time according to the [W3C time and data formats [external link]](https://www.w3.org/TR/NOTE-datetime). If the time is specified always include the time zone.   
 * Time periods can be specified by specifying the start date and the end date separated by a slash (/).
 * The following types should be filled-out by the data producer:
     * Collected: time range when the resource was arranged (not necessarily identical to the time range when the resource was created).
-    * Created: first version of a resource, cannot be identical with updated.
-    * Updated: if the resource is a more recent version, cannot be identical with created.
+    * Created: first version of a resource; must not be identical with updated.
+    * Updated: for a more recent version of the resource; must not be identical with created.
 * The following types are set by the publisher:
     * Submitted: point in time when the data were recieved by the data publisher.
-    * Accepted: point in time when the data publisher decides to publish the data.
+    * Accepted: point in time when the data publisher accepts the data for publication.
     * Issued: long format of the field [_publicationYear_](#5-publicationyear-m), point in time when a publisher publishes the data; should be set.
     * Available: only use in the context of embargo periods (this is not recommended).
     * Withdrawn: point in time when the publisher retracts the data publication.
@@ -530,7 +532,7 @@ __Example__
 1. If you describe a physical object (biological sample, fragment of a meteorite) or an instrument (a book scanner, a microscope) use "PhysicalObject" and "Instrument", respectively. If not, proceed with 2.
 
 2. Decide if the resource is data or discursive text (e.g. journal article or analytical text).
-If it's discursive text, choose one of the following:
+If it is discursive text, choose one of the following:
 
     * Book
     * BookChapter
@@ -841,7 +843,7 @@ __Example__
 ### 18 geoLocation [r]
 [DataCite documentation [external link]](https://datacite-metadata-schema.readthedocs.io/en/4.5/properties/geolocation/)
 
-* This field is recommended.
+* This field is recommended where applicable.
 * Describes the resource (e.g. where an image has been taken or where a sensor is located), *not* the related project or institute, if the former is not applicable, do **not** use it for the latter.
 * _geoLocationPlace_ must be identical to corresponding GeoNames field in the [_subjects_](#6-subject-m), consult the [geotagging](#geotagging) subsection.
 * Canonical source for coordinates is the [GeoNames Service [external link]](http://www.geonames.org/export/web-services.html).
