@@ -35,8 +35,8 @@
   <publisher>Leibniz Supercomputing Centre</publisher>
   <publicationYear>2019</publicationYear>
   <subjects>
-    <subject xml:lang="en" subjectScheme="dewey" classificationCode="550">Earth sciences</subject>
-    <subject xml:lang="en" subjectScheme="DFG" classificationCode="313">Atmospheric Science, Oceanography and Climate Research</subject>
+    <subject xml:lang="en" subjectScheme="DDC" classificationCode="550">Earth sciences</subject>
+    <subject xml:lang="en" subjectScheme="DFG Classification of Scientific Disciplines, Research Areas, Review Boards and Subject Areas" classificationCode="313">Atmospheric Science, Oceanography and Climate Research</subject>
     <subject xml:lang="en" subjectScheme="Wikidata QID" schemeURI="https://www.wikidata.org/wiki/" classificationCode="Q5135703">Cloud fraction</subject>
   </subjects>
   <contributors>

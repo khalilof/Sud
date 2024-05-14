@@ -27,11 +27,7 @@
 <publicationYear>2008</publicationYear>
 
 <subjects>
-	<subject xml:lang="en"
-             subjectScheme="dewey"
-             classificationCode="539.76">   
-             539.76 High Energy Physics
-    </subject>
+	<subject xml:lang="en" subjectScheme="DDC" classificationCode="539.76">High Energy Physics</subject>
 	<subject subjectScheme="GND" schemeURI="https://d-nb.info/gnd/" xml:lang="de" valueURI="https://d-nb.info/gnd/4333385-0">Formfaktor</subject>
 	<subject subjectScheme="GND" schemeURI="https://d-nb.info/gnd/" xml:lang="de" valueURI="https://d-nb.info/gnd/4212506-6">Summenregel</subject>
 	<subject subjectScheme="wikidata" schemeURI="https://www.wikidata.org/wiki/" xml:lang="en" valueURI="https://www.wikidata.org/wiki/Q238170">quantum chromodynamics</subject>

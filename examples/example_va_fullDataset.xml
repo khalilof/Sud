@@ -25,10 +25,10 @@
   <publisher xml:lang="de">Universitätsbibliothek der Ludwig-Maximilians-Universität München</publisher>
   <publicationYear>2019</publicationYear>
   <subjects>
-    <subject xml:lang="en" schemeURI="http://dewey.info/" subjectScheme="dewey">410 Linguistics</subject>
-    <subject xml:lang="en" schemeURI="http://dewey.info/" subjectScheme="dewey">004 Data processing computer science</subject>
+    <subject xml:lang="en" subjectScheme="DDC" classificationCode="410">Linguistics</subject>
+    <subject xml:lang="en" subjectScheme="DDC" classificationCode="004">Data processing computer science</subject>
     <subject xml:lang="de">MITTAGSRAST HALTEN</subject>
-    <subject xml:lang="en" schemeURI="http://dewey.info/" subjectScheme="dewey">430 Germanic languages German</subject>
+    <subject xml:lang="en" subjectScheme="DDC" classificationCode="430">Germanic languages German</subject>
     <subject xml:lang="en" schemeURI="https://glottolog.org/resource/languoid/id/" subjectScheme="Glottocode" valueURI="https://glottolog.org/resource/languoid/id/high1286">High German</subject>
     <subject xml:lang="en" schemeURI="https://glottolog.org/resource/languoid/id/" subjectScheme="Glottocode" valueURI="https://glottolog.org/resource/languoid/id/sout3147">Western South Slavic</subject>
   </subjects>
