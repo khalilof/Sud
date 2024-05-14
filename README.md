@@ -29,5 +29,4 @@ Recent version:
 Version: 3.0 / 03.05.2024
 
 Previous version:
-Version: 2.0 / 20.09.2022
-Version: 1.0 / 15.11.2019
+Version: 2.0 / 20.09.2022; Version: 1.0 / 15.11.2019
